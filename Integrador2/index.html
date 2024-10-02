@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Workshop Cotizador</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./css/1440px.css" media="screen and (min-width: 1440px)" />
+        <!-- Scripts -->
+        <script src="./scripts/main.js" type="module"></script>
+        <!-- Script que consume API de Rick and Morty y crea las cards mostradas -->
+        <script src="./index.js" async></script>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <ul>
+                    <li class="nav__item1">
+                        <a href="#" onclick="showPage('page')">Home</a>
+                    </li>
+                    <li class="nav__item2">
+                        <a href="#" onclick="showPage('page2')">Consume de Api Rick & Morty</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="page" class="page active">
+            <div class="container">
+                <h1>Seguros del Hogar</h1>
+                <div class="formContainer">
+                    <h2>Completa los datos solicitados</h2>
+                    <form id="formulario">
+                        <div class="formItem">
+                            <label> Selecciona el tipo de propiedad </label>
+
+                            <select id="tipoPropiedad">
+                                <option value="casa">Casa</option>
+                                <option value="departamento">Departamento</option>
+                                <option value="ph">PH</option>
+                            </select>
+                        </div>
+                        <div class="formItem">
+                            <label> Selecciona su ubicacion </label>
+                            <select id="Barrio">
+                                <option value="CABA">CABA</option>
+                                <option value="AMBA">AMBA</option>
+                            </select>
+                        </div>
+                        <div class="formItem">
+                            <label> Ingresa los metros cuadrados </label>
+                        </div>
+                        <input type="number" id="metrosCuadradosInput" />
+                        <button type="submit">COTIZAR</button>
+                    </form>
+                    <p class="precioEstimado">Precio estimado: U$D <span id="PrecioEstimado"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="page">
+            <main class="container2">
+                <section id="mainContent" class="mainContent"></section>
+            </main>
+        </div>
+    </body>
+</html>
